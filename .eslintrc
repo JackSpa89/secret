@@ -1,0 +1,157 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "extends": [
+    "standard",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "document": true,
+    "window": true,
+    "console": true,
+    "jsdom": true,
+    "KeyboardEvent": true,
+    "mount": true,
+    "MouseEvent": true,
+    "shallow": true,
+    "URLSearchParams": true,
+    "describe": true,
+    "it": true,
+    "expect": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort"
+  ],
+  "rules": {
+    // ES6
+    "comma-dangle": 0,
+    "no-unused-expressions": 0,
+    "no-case-declarations": 0,
+    "no-use-before-define": "off",
+    "camelcase": 0,
+
+    "indent": [
+      "error", 4, {
+        "SwitchCase": 1
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+      { "blankLine": "always", "prev": "*", "next": ["const", "let", "var"]},
+      { "blankLine": "any",    "prev": ["const", "let", "var"], "next": ["const", "let", "var"]}
+    ],
+    // JSX
+    "react/jsx-uses-react": [
+      "error"
+    ],
+    "react/jsx-uses-vars": [
+      "error"
+    ],
+    "react/jsx-curly-spacing": [
+      2,
+      { "when": "always", "spacing": { "objectLiterals": "never", "children": true }}
+    ],
+    "react/jsx-tag-spacing": [
+      2,
+      {}
+    ],
+    "react/jsx-equals-spacing": [
+      2,
+      "never"
+    ],
+    // Standardjs
+    "standard/no-callback-literal": 0,
+    // node
+    "node/no-callback-literal": 0,
+    // Typescript
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": false,
+          "Function": false,
+          "object": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
+      { "accessibility": "no-public" }
+    ],
+    // Import sort
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Node.js builtins. You could also generate this regex if you use a `.js` config.
+          // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+          [
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
+          ],
+          // Packages. `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Internal packages.
+          ["^(~components)(/.*|$)"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^(~styles)(/.*|$)", "^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.{js,jsx}"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": 0
+      }
+    }
+  ]
+}
