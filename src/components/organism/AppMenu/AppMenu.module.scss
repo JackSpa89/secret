@@ -1,0 +1,19 @@
+@import url('http://fonts.cdnfonts.com/css/new-walt-disney-ui');
+
+.appMenu {
+  &__logo {
+    text-align: center;
+    margin-right: 50px;
+    font-size: 60px;
+    font-family: 'New Walt Disney Font', sans-serif;
+  }
+
+  &__button {
+    text-align: center;
+    margin: 0px 40px 0px 0px;
+    font-size: 35px;
+    font-family: 'New Walt Disney UI', sans-serif;
+    color: white;
+    display: block;
+  }
+}

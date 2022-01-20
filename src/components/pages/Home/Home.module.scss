@@ -1,0 +1,26 @@
+@import url('http://fonts.cdnfonts.com/css/new-walt-disney-ui');
+
+.root {
+  &__backgroundImage {
+    background-image: url('/img/disney.jpeg');
+    background-size: cover;
+    height: 900px;
+    position: relative;
+  }
+
+  &__names {
+    padding-top: 120px;
+    font-family: 'New Walt Disney Font', sans-serif;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: 'New Walt Disney Font', sans-serif;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+  }
+}

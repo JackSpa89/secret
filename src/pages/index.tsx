@@ -1,11 +1,9 @@
 import * as React from 'react';
 
-import HomePage from './homepage';
+import HomePage from '~components/pages/Home/Home';
 
-class Page extends React.Component<{}> {
-    render (): React.ReactNode {
-        return <HomePage />;
-    }
-}
+const HomeRoute = (): JSX.Element => {
+    return <HomePage />;
+};
 
-export default Page;
+export default HomeRoute;

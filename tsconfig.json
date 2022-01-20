@@ -17,6 +17,10 @@
     "noEmit": true,
     "paths": {
       "~components/*": [ "./src/components/*" ],
+      "~constants/*": ["./src/constants/*" ],
+      "~helper/*": ["./src/helper/*" ],
+      "~img/*": ["./public/img/*" ],
+      "~pages/*": ["./src/pages/*" ]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

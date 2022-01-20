@@ -2,6 +2,13 @@
   "version": "00.00.01",
   "packageManager": "yarn@3.1.1",
   "dependencies": {
+    "@emotion/react": "11.5.0",
+    "@emotion/styled": "11.3.0",
+    "@mui/icons-material": "5.0.5",
+    "@mui/lab": "5.0.0-alpha.53",
+    "@mui/material": "5.0.6",
+    "@mui/styles": "5.0.2",
+    "clsx": "1.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "7.2.6",
@@ -11,6 +18,7 @@
     "next-progressbar": "1.0.0"
   },
   "devDependencies": {
+    "@mui/types": "7.0.0",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
     "@types/react-redux": "7.1.21",
@@ -29,6 +37,7 @@
     "eslint-plugin-standard": "5.0.0",
     "husky": "7.0.4",
     "lint-staged": "12.0.3",
+    "sass": "1.43.4",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
     "ts-node": "10.4.0",
