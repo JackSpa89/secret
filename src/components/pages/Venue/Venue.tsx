@@ -3,6 +3,8 @@ import Head from 'next/head';
 
 import { AppMenu } from '~components/organism/AppMenu/AppMenu';
 
+import style from './Venue.module.scss';
+
 export const VenuePage: React.FC = () => {
     return (
         <div className="venue">
@@ -10,7 +12,8 @@ export const VenuePage: React.FC = () => {
                 <title>Venue</title>
             </Head>
             <AppMenu />
-            <div>Some information about the venue</div>
+            <div className={ style.root__backgroundImage }>
+            </div>
         </div>
     );
 };

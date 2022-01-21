@@ -16,10 +16,13 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
+      "~atoms/*": [ "./src/atoms/*" ],
       "~components/*": [ "./src/components/*" ],
       "~constants/*": ["./src/constants/*" ],
       "~helper/*": ["./src/helper/*" ],
       "~img/*": ["./public/img/*" ],
+      "~molecules/*": [ "./src/molecules/*" ],
+      "~organism/*": [ "./src/organism/*" ],
       "~pages/*": ["./src/pages/*" ]
     },
     "resolveJsonModule": true,

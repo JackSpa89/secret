@@ -6,6 +6,8 @@ import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
+import { Countdown } from '~components/molecules/countdown/Countdown';
+
 import style from './AppMenu.module.scss';
 
 import { navigateToHome, navigateToPictures, navigateToRsvp, navigateToVenue } from '~helper/_url';
@@ -48,6 +50,7 @@ export const AppMenu: React.FC = () => {
                             Rsvp
                         </Button>
                     </Box>
+                    <Countdown />
                 </Toolbar>
             </Container>
         </AppBar>
