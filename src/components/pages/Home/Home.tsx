@@ -10,6 +10,7 @@ export const HomePage: React.FC = () => {
         <div className={ style.root }>
             <Head>
                 <title>Homepage</title>
+                <link rel="icon" type="image/png" href="https://thumbs.dreamstime.com/b/wedding-rings-vector-icon-black-white-background-110459020.jpg" sizes="800x800" />
             </Head>
             <AppMenu />
             <div className={ style.root__backgroundImage }>

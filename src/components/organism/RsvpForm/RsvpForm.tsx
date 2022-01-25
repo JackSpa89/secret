@@ -19,16 +19,20 @@ export const SignupForm: React.FC = () => {
     const [ finished, setFinished ] = useState(false);
     const [ willAttend, setWillAttend ] = useState(false);
 
+    const FinishedText: React.FC = () => {
+        return willAttend
+            ? <div className={ style.rsvpForm__finished }>
+                <div>We'll meet you at the castle!</div>
+            </div>
+            : <div className={ style.rsvpForm__finished }>
+                <div>Sorry you can't make it!</div>
+                <div>We'll miss you!</div>
+            </div>;
+    };
+
     return (
         finished
-            ? willAttend
-                ? <div className={ style.rsvpForm__finished }>
-                    <div>We'll meet you at the castle!</div>
-                </div>
-                : <div className={ style.rsvpForm__finished }>
-                    <div>Sorry you can't make it!</div>
-                    <div>We'll miss you!</div>
-                </div>
+            ? <FinishedText />
             : <Formik
                 initialValues={ initialValues }
                 onSubmit={ async (values) => {
@@ -93,7 +97,7 @@ export const SignupForm: React.FC = () => {
                                         <div>
                                             {values.plusOne.length > 0 &&
                                             values.plusOne.map((name, index) => (
-                                                <div className="row" key={ index }>
+                                                <div className={ style.rsvpForm__wrapper } key={ index }>
                                                     <div className="col">
                                                         <label className={ style.rsvpForm__label }>{ `${index + 1}. Guest` }</label>
                                                         <Field
@@ -102,14 +106,12 @@ export const SignupForm: React.FC = () => {
                                                             placeholder={ `${index + 1}. Guest` }
                                                             type="text"
                                                         />
-                                                    </div>
-                                                    <div className="col">
                                                         <button
                                                             type="button"
                                                             className={ style.rsvpForm__button }
                                                             onClick={ () => remove(index) }
                                                         >
-                                                            Remove
+                                                            X
                                                         </button>
                                                     </div>
                                                 </div>

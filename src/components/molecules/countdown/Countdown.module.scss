@@ -1,31 +1,23 @@
 .tickerShell {
   display: flex;
   border: 1px solid white;
-  padding: 8px;
-  flex: 7;
-  margin-left: 120px;
-
-  .timeIsUp {
-    flex: 1;
-    text-align: center;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
+  padding: .1rem;
+  flex: 12rem;
+  margin-left: 8rem;
 }
 
 .tickerCell {
-  flex: 1;
+  flex: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 
   > .tickerCellValue {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   > .tickerCellLabel {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: italic;
   }
 }
