@@ -1,0 +1,29 @@
+@import url('http://fonts.cdnfonts.com/css/new-walt-disney-ui');
+
+.rsvp {
+  &__title {
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+    font-family: 'New Walt Disney Font', sans-serif;
+  }
+
+  &__wrapper {
+    background-image: url("/img/rosesBorder.png");
+    background-size: cover;
+    margin-left: -70px;
+    margin-right: -70px;
+    height: 1100px;
+    display: flex;
+  }
+
+  &__image {
+    content: url("/img/beOurGuest.jpeg");
+    align-content: center;
+    align-self: center;
+    margin-left: 230px;
+    margin-top: -80px;
+    min-height: 500px;
+    max-height: 500px;
+  }
+}
