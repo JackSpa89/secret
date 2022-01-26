@@ -19,7 +19,7 @@
   &__input {
     margin-top: 2rem;
     font-size: 2rem;
-    font-family: 'New Walt Disney UI', sans-serif;
+    font-family: 'New Walt Disney Font', sans-serif;
     max-width: 20rem;
   }
 
@@ -43,5 +43,12 @@
     margin-left: 8rem;
     text-align: center;
     align-self: center;
+  }
+
+  &__error {
+    font-size: 1rem;
+    font-family: 'New Walt Disney Font', sans-serif;
+    color: red;
+    text-align: center;
   }
 }

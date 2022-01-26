@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ref, set } from 'firebase/database';
-import { Field, FieldArray, Form, Formik } from 'formik';
+import { ErrorMessage, Field, FieldArray, Form, Formik } from 'formik';
+import * as yup from 'yup';
 
 import style from './RsvpForm.module.scss';
 
@@ -14,6 +15,26 @@ const initialValues = {
     allergies: '',
     willAttend: ''
 };
+
+const validationSchema = yup.object().shape({
+    name: yup
+        .string()
+        .min(2)
+        .required('Name is required'),
+    willAttend: yup
+        .string()
+        .min(2)
+        .required('required!')
+});
+
+type ErrorProps = {
+    name: string;
+}
+
+const Error: React.FC<ErrorProps> = ({ name }) =>
+    <ErrorMessage name={ name }>
+        { msg => <div className={ style.rsvpForm__error }>{msg} </div> }
+    </ErrorMessage>;
 
 export const SignupForm: React.FC = () => {
     const [ finished, setFinished ] = useState(false);
@@ -35,6 +56,7 @@ export const SignupForm: React.FC = () => {
             ? <FinishedText />
             : <Formik
                 initialValues={ initialValues }
+                validationSchema={ validationSchema }
                 onSubmit={ async (values) => {
                     values.willAttend === 'true' && setWillAttend(true);
                     set(ref(database, values.name), {
@@ -59,6 +81,7 @@ export const SignupForm: React.FC = () => {
                                 name="name"
                                 placeholder="Full name"
                             />
+                            <Error name="name" />
                         </div>
                         <div className={ style.rsvpForm__wrapper }>
                             <label className={ style.rsvpForm__label }>You coming?</label>
@@ -80,6 +103,7 @@ export const SignupForm: React.FC = () => {
                                 />
                             No
                             </label>
+                            <Error name="willAttend" />
                         </div>
                         {
                             values.willAttend === 'true' && <div>
