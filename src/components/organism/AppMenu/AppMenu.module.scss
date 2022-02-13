@@ -1,18 +1,33 @@
-@import url('http://fonts.cdnfonts.com/css/new-walt-disney-ui');
+@import 'src/scss/constants/fonts';
+@import 'src/scss/mixins/breakpoints';
 
 .appMenu {
+  &__box {
+    flex-grow: 1;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   &__logo {
+    @include screen-s-strict {
+      font-size: 0;
+      margin-right: 0;
+    }
     text-align: center;
     margin-right: 2rem;
     font-size: 3rem;
-    font-family: 'New Walt Disney Font', sans-serif;
+    font-family: $font_disney_font;
   }
 
   &__button {
+    @include screen-s-strict {
+      font-size: .8rem;
+      margin: 0 1rem 0 0;
+    }
     text-align: center;
     margin: 0 2rem 0 0;
     font-size: 2rem;
-    font-family: 'New Walt Disney UI', sans-serif;
+    font-family: $font_disney_ui;
     color: white;
     display: block;
   }

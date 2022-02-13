@@ -1,7 +1,15 @@
+@import 'src/scss/mixins/breakpoints';
+
 .root {
   &__backgroundImage {
     background-image: url('/img/venue.jpeg');
+    @include screen-s-strict {
+      width: 15rem;
+      height: 20rem;
+    }
     width: 600px;
     height: 500px;
+    background-repeat: no-repeat;
+    background-size:contain;
   }
 }

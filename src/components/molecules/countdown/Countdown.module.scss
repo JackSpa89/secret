@@ -1,4 +1,12 @@
+@import 'src/scss/mixins/breakpoints';
+@import 'src/scss/constants/fonts';
+
 .tickerShell {
+  @include screen-s-strict {
+    margin-left: 0;
+    border: 3px solid red;
+  }
+  font-family: $font_disney_ui;
   display: flex;
   border: 1px solid white;
   padding: .1rem;

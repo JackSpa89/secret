@@ -1,0 +1,19 @@
+@import "src/scss/constants/breakpoints.module";
+
+@mixin screen-s-and-up {
+  @media screen and (min-width: #{$screen-s-min}) {
+    @content;
+  }
+}
+
+@mixin screen-s-strict {
+  @media screen and (min-width: #{$screen-s-min}) and (max-width: #{$screen-s-max}) {
+    @content;
+  }
+}
+
+@mixin screen-l-strict {
+  @media screen and (min-width: #{$screen-l-min}) {
+    @content;
+  }
+}

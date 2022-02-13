@@ -1,0 +1,12 @@
+$screen-s-min: 320px;
+$screen-s-max: 767px;
+$screen-l-min: 1024px;
+$screen-l-max: 1279px;
+
+$screen-s-padding: 26px;
+$screen-l-padding: 70px;
+
+:export {
+  mobileMax: $screen-s-max;
+  desktopMax: $screen-l-max;
+}
