@@ -6,6 +6,10 @@
 
 # next
 /.next
+/out/
+
+# firebase
+/.firebase
 
 # env
 /.env.local
