@@ -8,7 +8,7 @@ import style from './Rsvp.module.scss';
 
 export const RsvpPage: React.FC = () => {
     return (
-        <div className="rsvp">
+        <div className={ style.rsvp }>
             <Head>
                 <title>Rsvp</title>
             </Head>

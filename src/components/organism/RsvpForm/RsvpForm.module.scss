@@ -1,6 +1,12 @@
-@import url('http://fonts.cdnfonts.com/css/new-walt-disney-ui');
+@import 'src/scss/constants/fonts';
+@import 'src/scss/mixins/breakpoints';
 
 .rsvpForm {
+  @include screen-s-strict {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
   flex-direction: row;
   align-self: center;
   justify-content: center;
@@ -8,18 +14,25 @@
   margin-left: 7rem;
 
   &__label {
+    @include screen-s-strict {
+      margin-right: 1rem;
+    }
     justify-content: center;
     align-content: center;
     font-size: 2rem;
     width: available;
     margin-right: 2rem;
-    font-family: 'New Walt Disney UI', sans-serif;
+    font-family: $font_disney_ui;
   }
 
   &__input {
+    @include screen-s-strict {
+      margin-top: 1rem;
+      width: 45%;
+    }
     margin-top: 2rem;
     font-size: 2rem;
-    font-family: 'New Walt Disney Font', sans-serif;
+    font-family: $font_disney_font;
     max-width: 20rem;
   }
 
@@ -30,16 +43,20 @@
 
   &__button {
     margin-left: 1rem;
-    font-family: 'New Walt Disney Font', sans-serif;
+    font-family: $font_disney_font;
     font-size: 2rem;
     text-align: center;
     color: black;
   }
 
   &__finished {
+    @include screen-s-strict {
+      margin-left: 0;
+      margin-top: 5rem;
+    }
     flex-direction: column;
-    font-family: 'New Walt Disney Font', sans-serif;
-    font-size: 3rem;
+    font-family: $font_disney_font;
+    font-size: 4rem;
     margin-left: 8rem;
     text-align: center;
     align-self: center;
@@ -47,7 +64,7 @@
 
   &__error {
     font-size: 1rem;
-    font-family: 'New Walt Disney Font', sans-serif;
+    font-family: $font_disney_font;
     color: red;
     text-align: center;
   }
