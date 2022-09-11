@@ -82,7 +82,7 @@ export const PicturesPage: React.FC = () => {
                 {
                     progress > 0 && progress < 100 && <LinearWithValueLabel progress={ progress } />
                 }
-                <ImageList sx={{ width: '100%' }} cols={ isMobile() ? 2 : 4 }>
+                <ImageList sx={{ width: '100%' }} cols={ isMobile() ? 1 : 4 }>
                     {
                         imagesList.length > 0 && imagesList.map((image, key) => {
                             return <ImageListItem key={ key }>
@@ -97,7 +97,6 @@ export const PicturesPage: React.FC = () => {
                 </ImageList>
             </div>
         </div>
-
     );
 };
 

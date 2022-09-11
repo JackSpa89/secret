@@ -7,16 +7,17 @@
   display: flex;
 
   &__button {
+    font-family: system-ui;
     align-content: center;
     font-size: 2rem;
-    color: black;
-    background-color: blue;
+    color: white;
+    background-color: purple;
   }
 
   &__input {
     align-self: center;
     font-family: $font_disney_font;
-    color: blue;
+    color: purple;
     font-size: 2rem;
   }
 }
