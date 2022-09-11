@@ -2,6 +2,7 @@
 @import 'src/scss/mixins/breakpoints';
 
 .appMenu {
+  background-color: purple;
   &__box {
     flex-grow: 1;
     align-content: center;
@@ -21,12 +22,13 @@
 
   &__button {
     @include screen-s-strict {
-      font-size: .8rem;
-      margin: 0 1rem 0 0;
+      font-size: 1.1rem;
+      margin: 0 0 0 1rem;
+      text-align: center;
     }
     text-align: center;
     margin: 0 2rem 0 0;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: $font_disney_ui;
     color: white;
     display: block;

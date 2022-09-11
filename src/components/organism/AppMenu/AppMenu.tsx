@@ -1,4 +1,8 @@
 import * as React from 'react';
+import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import HomeIcon from '@mui/icons-material/Home';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -9,12 +13,12 @@ import { Countdown } from '~components/molecules/countdown/Countdown';
 
 import style from './AppMenu.module.scss';
 
-import { navigateToHome, navigateToPictures, navigateToRsvp, navigateToVenue } from '~helper/_url';
+import { navigateToHome, navigateToOurStory, navigateToPictures, navigateToRsvp } from '~helper/_url';
 import { isMobile } from '~helper/windowsize';
 
 export const AppMenu: React.FC = () => {
     return (
-        <AppBar position="static">
+        <AppBar className={ style.appMenu } position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -28,25 +32,25 @@ export const AppMenu: React.FC = () => {
                         className={ style.appMenu__button }
                         onClick={ navigateToHome }
                     >
-                            Home
+                        <HomeIcon />
                     </Button>
                     <Button
                         className={ style.appMenu__button }
                         onClick={ navigateToPictures }
                     >
-                            Pictures
+                        <AddAPhotoIcon />
                     </Button>
                     <Button
                         className={ style.appMenu__button }
-                        onClick={ navigateToVenue }
+                        onClick={ navigateToOurStory }
                     >
-                            Venue
+                        <AutoStoriesIcon />
                     </Button>
                     <Button
                         className={ style.appMenu__button }
                         onClick={ navigateToRsvp }
                     >
-                            Rsvp
+                        <HowToRegIcon />
                     </Button>
                     { !isMobile() && <Countdown />}
                 </Toolbar>
