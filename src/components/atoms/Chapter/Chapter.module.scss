@@ -1,0 +1,17 @@
+@import 'src/scss/mixins/breakpoints';
+@import 'src/scss/constants/fonts';
+
+.root {
+  margin-left: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  &__chapterNumber {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  &__text {
+    flex: inherit;
+  }
+}

@@ -8,8 +8,8 @@ export const navigateToHome = (): Promise<boolean> =>
 export const navigateToPictures = (): Promise<boolean> =>
     Router.push(Routes.PICTURES);
 
-export const navigateToVenue = (): Promise<boolean> =>
-    Router.push(Routes.VENUE);
+export const navigateToOurStory = (): Promise<boolean> =>
+    Router.push(Routes.OUR_STORY);
 
 export const navigateToRsvp = (): Promise<boolean> =>
     Router.push(Routes.RSVP);

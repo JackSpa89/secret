@@ -1,0 +1,17 @@
+@import 'src/scss/mixins/breakpoints';
+@import 'src/scss/constants/fonts';
+
+.root {
+  font-family: $font_disney_font;
+
+  &__title {
+    @include screen-s-strict {
+    }
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__chapter {
+    text-align: center;
+  }
+}

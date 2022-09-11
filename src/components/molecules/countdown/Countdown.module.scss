@@ -3,8 +3,9 @@
 
 .tickerShell {
   @include screen-s-strict {
+    margin-top: -2.4rem;
     margin-left: 0;
-    border: 3px solid red;
+    border: 10px solid purple;
   }
   font-family: $font_disney_ui;
   display: flex;
