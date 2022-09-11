@@ -6,6 +6,8 @@ import { SignupForm } from '~components/organism/RsvpForm/RsvpForm';
 
 import style from './Rsvp.module.scss';
 
+import { isMobile } from '~helper/windowsize';
+
 export const RsvpPage: React.FC = () => {
     return (
         <div className={ style.rsvp }>
@@ -14,7 +16,8 @@ export const RsvpPage: React.FC = () => {
             </Head>
             <AppMenu />
             <div className={ style.rsvp__wrapper }>
-                <img alt="be our guest" className={ style.rsvp__image } />
+                <div className={ style.rsvp__intro }>Please RSVP by January 31st 2023!</div>
+                { isMobile() && <img alt="be our guest mobile" src={ '/img/beOurGuestMobile.jpeg' } className={ style.rsvp__image } />}
                 <SignupForm />
             </div>
         </div>

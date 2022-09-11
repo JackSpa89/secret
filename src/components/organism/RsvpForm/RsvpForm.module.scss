@@ -3,15 +3,13 @@
 
 .rsvpForm {
   @include screen-s-strict {
-    width: 80%;
-    margin-left: 0;
-    margin-top: 1rem;
+    background-image: none;
   }
-  flex-direction: row;
-  align-self: center;
-  justify-content: center;
-  text-align: left;
-  margin-left: 7rem;
+  text-align: center;
+  background-image: url('/img/beOurGuest.jpeg');
+  background-repeat:no-repeat;
+  background-size:contain;
+  border: .4rem solid purple;
 
   &__label {
     @include screen-s-strict {
@@ -20,7 +18,6 @@
     justify-content: center;
     align-content: center;
     font-size: 2rem;
-    width: available;
     margin-right: 2rem;
     font-family: $font_disney_ui;
   }
@@ -53,9 +50,11 @@
     @include screen-s-strict {
       margin-left: 0;
       margin-top: 5rem;
+      font-size: 2.7rem;
     }
     flex-direction: column;
     font-family: $font_disney_font;
+    color: purple;
     font-size: 4rem;
     margin-left: 8rem;
     text-align: center;

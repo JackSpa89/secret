@@ -1,22 +1,18 @@
-@import url('http://fonts.cdnfonts.com/css/new-walt-disney-ui');
+@import 'src/scss/constants/fonts';
 
 .rsvp {
+  &__intro {
+    margin: 1.4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: $font_disney_font;
+  }
+
   &__wrapper {
-    background-image: url("/img/rosesBorder.png");
-    background-size: cover;
-    margin-left: -4.4rem;
-    margin-right: -4.4rem;
-    height: 70rem;
-    display: flex;
+    flex-direction: row;
   }
 
   &__image {
-    content: url("/img/beOurGuest.jpeg");
-    align-content: center;
-    align-self: center;
-    margin-left: 15rem;
-    margin-top: -6rem;
-    min-height: 30rem;
-    max-height: 30rem;
+    width: -webkit-fill-available;
   }
 }
