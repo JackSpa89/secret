@@ -24,7 +24,12 @@ export const HomePage: React.FC = () => {
                     Once upon a time...
                 </div>
             </div>
-            { isMobile() && <Countdown />}
+            { isMobile() && (
+                <div>
+                    <Countdown />
+                    <img className={ style.root__homeImg } alt='homeImg' src={ 'img/home.jpeg' } />
+                </div>
+            )}
         </div>
     );
 };
