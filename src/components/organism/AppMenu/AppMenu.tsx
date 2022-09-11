@@ -1,7 +1,7 @@
 import * as React from 'react';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import HomeIcon from '@mui/icons-material/Home';
+import CastleIcon from '@mui/icons-material/Castle';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
@@ -17,6 +17,8 @@ import { navigateToHome, navigateToOurStory, navigateToPictures, navigateToRsvp 
 import { isMobile } from '~helper/windowsize';
 
 export const AppMenu: React.FC = () => {
+    const fontSize = 30;
+
     return (
         <AppBar className={ style.appMenu } position="static">
             <Container maxWidth="xl">
@@ -32,25 +34,25 @@ export const AppMenu: React.FC = () => {
                         className={ style.appMenu__button }
                         onClick={ navigateToHome }
                     >
-                        <HomeIcon />
+                        <CastleIcon sx={{ fontSize }} />
                     </Button>
                     <Button
                         className={ style.appMenu__button }
                         onClick={ navigateToPictures }
                     >
-                        <AddAPhotoIcon />
+                        <AddAPhotoIcon sx={{ fontSize }} />
                     </Button>
                     <Button
                         className={ style.appMenu__button }
                         onClick={ navigateToOurStory }
                     >
-                        <AutoStoriesIcon />
+                        <AutoStoriesIcon sx={{ fontSize }} />
                     </Button>
                     <Button
                         className={ style.appMenu__button }
                         onClick={ navigateToRsvp }
                     >
-                        <HowToRegIcon />
+                        <HowToRegIcon sx={{ fontSize }} s />
                     </Button>
                     { !isMobile() && <Countdown />}
                 </Toolbar>

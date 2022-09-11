@@ -14,8 +14,8 @@
 
   &__names {
     @include screen-s-strict {
-      padding-top: 2rem;
-      font-size: 1.5rem;
+      padding-top: 3.1rem;
+      font-size: 2rem;
     }
     padding-top: 10rem;
     font-family: $font_disney_font;
@@ -26,7 +26,7 @@
 
   &__text {
     @include screen-s-strict {
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin-top: 1rem;
     }
     font-family: $font_disney_font;
