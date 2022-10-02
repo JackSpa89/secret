@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 import { Countdown } from '~components/molecules/countdown';
@@ -6,9 +7,18 @@ import { AppMenu } from '~components/organism/AppMenu/AppMenu';
 
 import style from './Home.module.scss';
 
+import { navigateToGuestList } from '~helper/_url';
 import { isMobile } from '~helper/windowsize';
 
 export const HomePage: React.FC = () => {
+    const [ count, setCount ] = useState(0);
+
+    useEffect(() => {
+        if (count === 5) {
+            navigateToGuestList();
+        }
+    });
+
     return (
         <div className={ style.root }>
             <Head>
@@ -20,7 +30,7 @@ export const HomePage: React.FC = () => {
                 <div className={ style.root__names }>
                     Angela & Peter
                 </div>
-                <div className={ style.root__text }>
+                <div className={ style.root__text } onClick={ () => setCount(count + 1) }>
                     Once upon a time...
                 </div>
             </div>

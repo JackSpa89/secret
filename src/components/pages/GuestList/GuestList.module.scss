@@ -1,0 +1,23 @@
+@import 'src/scss/mixins/breakpoints';
+@import 'src/scss/constants/fonts';
+
+.guestList {
+  font-family: $font_disney_font;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__attend {
+    text-align: center;
+  }
+
+  &__item {
+    margin-left: 2rem;
+  }
+
+  &__line {
+    align-items: center;
+  }
+}

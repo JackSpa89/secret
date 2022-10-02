@@ -63,7 +63,7 @@ export const SignupForm: React.FC = () => {
                         name: values.name,
                         plusOne: values.plusOne,
                         allergies: values.allergies,
-                        willAttend: values.willAttend
+                        willAttend: values.willAttend === 'true'
                     })
                         .then(() => {
                             setFinished(true);

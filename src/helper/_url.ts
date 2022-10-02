@@ -13,3 +13,6 @@ export const navigateToOurStory = (): Promise<boolean> =>
 
 export const navigateToRsvp = (): Promise<boolean> =>
     Router.push(Routes.RSVP);
+
+export const navigateToGuestList = (): Promise<boolean> =>
+    Router.push(Routes.GUEST_LIST);
