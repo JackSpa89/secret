@@ -19,5 +19,18 @@
     font-family: $font_disney_font;
     color: purple;
     font-size: 2rem;
+    display: none;
+  }
+
+  &__stack {
+    &__upload {
+      display: flex;
+      width: 100%;
+      color: purple;
+    }
+
+    &__choosePicture {
+      background-color: purple;
+    }
   }
 }

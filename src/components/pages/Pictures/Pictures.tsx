@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { getDownloadURL, listAll, ref, uploadBytesResumable } from '@firebase/storage';
-import { ImageList, ImageListItem, Input } from '@mui/material';
+import { PhotoCamera } from '@mui/icons-material';
+import { IconButton, ImageList, ImageListItem, Stack } from '@mui/material';
 import Button from '@mui/material/Button';
 import Head from 'next/head';
 
@@ -16,6 +17,7 @@ import { isMobile } from '~helper/windowsize';
 export const PicturesPage: React.FC = () => {
     const [ imagesAsFile, setImagesAsFile ] = useState<File[]>([]);
     const [ imagesList, setImageList ] = useState<string[]>([]);
+    const [ localImagesList, setLocalImageList ] = useState<string[]>([]);
     const [ progress, setProgress ] = useState(0);
 
     const choosePicture = (e: React.ChangeEvent) => {
@@ -23,6 +25,7 @@ export const PicturesPage: React.FC = () => {
         const files = target.files;
 
         setImagesAsFile(Array.prototype.slice.call(files));
+        setLocalImageList(Array.prototype.slice.call(files));
     };
 
     const uploadPictures = (e: any) => {
@@ -67,18 +70,16 @@ export const PicturesPage: React.FC = () => {
             </Head>
             <AppMenu />
             <div className={ style.pictures }>
-                <Input
-                    className={ style.pictures__input }
-                    type="file"
-                    inputProps={{ multiple: true }}
-                    onChange={ choosePicture }
-                />
-                <Button
-                    className={ style.pictures__button }
-                    onClick={ uploadPictures }
-                >
-                    Upload
-                </Button>
+                <Stack className={ style.pictures__stack } justifyContent="flex-start" direction="column" alignItems="center">
+                    <IconButton className={ style.pictures__stack__upload } size="large" color="primary" aria-label="upload picture" component="label">
+                        <input onChange={ choosePicture } hidden accept="image/*" type="file" multiple={ true } />
+                        <PhotoCamera />
+                    </IconButton>
+                    <Button className={ style.pictures__stack__choosePicture } variant="contained" component="label">
+                        Upload {localImagesList.length} images
+                        <input onClick={ uploadPictures } hidden accept="image/*" multiple type="file" />
+                    </Button>
+                </Stack>
                 {
                     progress > 0 && progress < 100 && <LinearWithValueLabel progress={ progress } />
                 }
