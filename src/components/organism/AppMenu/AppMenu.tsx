@@ -52,7 +52,7 @@ export const AppMenu: React.FC = () => {
                         className={ style.appMenu__button }
                         onClick={ navigateToRsvp }
                     >
-                        <HowToRegIcon sx={{ fontSize }} s />
+                        <HowToRegIcon sx={{ fontSize }} />
                     </Button>
                     { !isMobile() && <Countdown />}
                 </Toolbar>

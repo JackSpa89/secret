@@ -2,10 +2,12 @@
 @import 'src/scss/constants/fonts';
 
 .root {
+  margin-top: 1.5rem;
   margin-left: 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: row;
+  font-size: 1.5rem;
   &__chapterNumber {
     font-weight: bold;
     margin-right: 1rem;

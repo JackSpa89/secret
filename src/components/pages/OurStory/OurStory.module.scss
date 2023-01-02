@@ -3,15 +3,19 @@
 
 .root {
   font-family: $font_disney_font;
+  font-size: 4rem;
+  @include screen-s-strict {
+    font-size: 1rem;
+  }
 
   &__title {
-    @include screen-s-strict {
-    }
+    font-size: 3rem;
+    margin-top: 1rem;
     text-align: center;
-    font-size: 2rem;
   }
 
   &__chapter {
+    font-size: 5rem;
     text-align: center;
   }
 }
