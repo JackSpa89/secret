@@ -9,7 +9,7 @@ import style from './OurStory.module.scss';
 
 const andagonText = 'They say that when one door closes another one opens. Throughout your lifetime many people will ' +
     'walk in and out of those doors and if you\'re lucky, you will find someone who walks in and stays. This is one of ' +
-    'those stories. Peter and Angela met on a sunny day in May 2018 at the andagon headquarters in Cologne Germany. ' +
+    'those stories. Peter and Angela met on a sunny day in May 2018 at the andagon headquarters in Cologne, Germany. ' +
     '\n \n Peter had originally declined the job offer because he wanted to live and work in Munich which is about 6' +
     ' hours away from Cologne. After numerous persuasion attempts by the tenacious recruiter Julian Sandig, Peter' +
     ' finally caved and accepted. He never knew that that single act would change his life forever.';
@@ -29,7 +29,24 @@ const thirdText = 'In June of 2019 the two were as thick as thieves. Peter wante
 
 const fourthText = 'Both Peter and Angela decided it was time for a  change. They moved to Düsseldorf in 2019 after' +
     ' Peter got a permanent position at the Douglas headquarters and Angela accepted a new position as a B2B Advisor' +
-    'at a language school called GoAcademy!';
+    ' at a language school called GoAcademy!';
+
+const fifthText = 'In 2021 they spent Christmas in the US and took mock engagement photos. Angela was ill so Peter ' +
+    'postponed the proposal till she was feeling better. He took her on an Easter spa vacation to Bad Oeynhausen ' +
+    'where they spent 2 relaxing days at the sauna. After about 12 hours at the spa, Peter took a knee, professed ' +
+    'his love and asked Angela to be his partner in crime till the end of their days.';
+
+const sixthText = 'In Germany, you have to have a courthouse ceremony before you can have a big wedding. The two were ' +
+    'married on July 8th, 2022 with their closest friends and family as their witness.';
+
+const seventhText = 'They flew to Thailand a couple days later and spent 2 1/2 weeks exploring, creating memories, ' +
+    'and visiting with friends.';
+
+const eightText = 'Upon their return Angela said "Baby or Cat?' +
+    'The couple welcomed their baby kitten Ginger Mumber to the family on August 16th, 2022.';
+
+const ninthText = 'Our story doesn\'t end there though... To get the next chapter, please join us on June 24th, 2023 ' +
+    'as we begin our happily ever after. \n 🥂\n \n \n';
 
 export const OurStoryPage: React.FC = () => {
     return (
@@ -46,7 +63,17 @@ export const OurStoryPage: React.FC = () => {
             <Chapter chapterNumber={ 3 } text={ 'First vacation' } />
             <ImageText imgSrc={ './firstVacation.jpeg' } text={ thirdText } />
             <Chapter chapterNumber={ 4 } text={ 'Düsseldorf' } />
-            <ImageText imgSrc={ './firstVacation.jpeg' } text={ fourthText } />
+            <ImageText imgSrc={ './duesseldorf.jpeg' } text={ fourthText } />
+            <Chapter chapterNumber={ 5 } text={ 'Engagement' } />
+            <ImageText imgSrc={ './mockEngagement.jpeg' } text={ fifthText } />
+            <Chapter chapterNumber={ 6 } text={ 'Hitched on a boat' } />
+            <ImageText imgSrc={ './courthouseWedding.jpeg' } text={ sixthText } />
+            <Chapter chapterNumber={ 7 } text={ 'Honeymoon' } />
+            <ImageText imgSrc={ './honeymoon.jpeg' } text={ seventhText } />
+            <Chapter chapterNumber={ 8 } text={ 'Ginger' } />
+            <ImageText imgSrc={ './ginger.jpeg' } text={ eightText } />
+            <Chapter chapterNumber={ 9 } text={ 'Happily ever after' } />
+            <ImageText imgSrc={ './theend.jpeg' } text={ ninthText } />
         </div>
     );
 };

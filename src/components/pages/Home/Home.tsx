@@ -33,6 +33,9 @@ export const HomePage: React.FC = () => {
                 <div className={ style.root__text } onClick={ () => setCount(count + 1) }>
                     Once upon a time...
                 </div>
+                <div className={ style.root__text } >
+                    June 24th, 2023
+                </div>
             </div>
             { isMobile() && (
                 <div>
