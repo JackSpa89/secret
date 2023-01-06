@@ -1,4 +1,5 @@
 module.exports = {
+    productionBrowserSourceMaps: true,
     publicRuntimeConfig: {
         productionBrowserSourceMaps: true,
         firebaseApiKey: process.env.FIREBASE_API_KEY,
