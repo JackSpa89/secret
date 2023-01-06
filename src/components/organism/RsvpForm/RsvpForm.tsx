@@ -43,7 +43,7 @@ export const SignupForm: React.FC = () => {
     const FinishedText: React.FC = () => {
         return willAttend
             ? <div className={ style.rsvpForm__finished }>
-                <div>We'll meet you at the castle!</div>
+                <div>We'll meet you at the mansion!</div>
             </div>
             : <div className={ style.rsvpForm__finished }>
                 <div>Sorry you can't make it!</div>

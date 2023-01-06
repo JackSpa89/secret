@@ -2,7 +2,6 @@ import * as React from 'react';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CastleIcon from '@mui/icons-material/Castle';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -28,12 +27,7 @@ export const AppMenu: React.FC = () => {
                     >
                         <CastleIcon sx={{ fontSize }} />
                     </Button>
-                    <Button
-                        className={ style.appMenu__button }
-                        onClick={ navigateToPictures }
-                    >
-                        <AddAPhotoIcon sx={{ fontSize }} />
-                    </Button>
+                    <div className={ style.appMenu__rsvpText } onClick={ navigateToRsvp }>RSVP</div>
                     <Button
                         className={ style.appMenu__button }
                         onClick={ navigateToOurStory }
@@ -42,9 +36,9 @@ export const AppMenu: React.FC = () => {
                     </Button>
                     <Button
                         className={ style.appMenu__button }
-                        onClick={ navigateToRsvp }
+                        onClick={ navigateToPictures }
                     >
-                        <HowToRegIcon sx={{ fontSize }} />
+                        <AddAPhotoIcon sx={{ fontSize }} />
                     </Button>
                     { !isMobile() && <Countdown />}
                 </Toolbar>

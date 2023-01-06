@@ -36,8 +36,9 @@ const fifthText = 'In 2021 they spent Christmas in the US and took mock engageme
     'where they spent 2 relaxing days at the sauna. After about 12 hours at the spa, Peter took a knee, professed ' +
     'his love and asked Angela to be his partner in crime till the end of their days.';
 
-const sixthText = 'In Germany, you have to have a courthouse ceremony before you can have a big wedding. The two were ' +
-    'married on July 8th, 2022 with their closest friends and family as their witness.';
+const sixthText = 'In Germany, you have to have to be married by a Justice of the peace in a courthouse or on a boat ' +
+    ' before you can have a big wedding ... silly Germans. The two were ' +
+    'married on July 8th, 2022 with their closest friends and family as their witnesses.';
 
 const seventhText = 'They flew to Thailand a couple days later and spent 2 1/2 weeks exploring, creating memories, ' +
     'and visiting with friends.';
@@ -46,7 +47,7 @@ const eightText = 'Upon their return Angela said "Baby or Cat?' +
     'The couple welcomed their baby kitten Ginger Mumber to the family on August 16th, 2022.';
 
 const ninthText = 'Our story doesn\'t end there though... To get the next chapter, please join us on June 24th, 2023 ' +
-    'as we begin our happily ever after. \n 🥂\n \n \n';
+    'as we continue our happily ever after. \n 🥂\n \n \n';
 
 export const OurStoryPage: React.FC = () => {
     return (

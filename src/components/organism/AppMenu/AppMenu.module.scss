@@ -21,4 +21,18 @@
     color: white;
     display: block;
   }
-}
+
+  &__rsvpText {
+    @include screen-s-strict {
+      margin: 0 2rem 0 0;
+      font-size: 1rem;
+    }
+    @include screen-m-strict {
+      margin: 0 10rem 0 0;
+    }
+    font-family: $font_disney_font;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    display: block;
+  }}

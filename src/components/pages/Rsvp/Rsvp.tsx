@@ -7,8 +7,6 @@ import { SignupForm } from '~components/organism/RsvpForm/RsvpForm';
 
 import style from './Rsvp.module.scss';
 
-import { isMobile } from '~helper/windowsize';
-
 export const RsvpPage: React.FC = () => {
     return (
         <div className={ style.rsvp }>
@@ -19,7 +17,7 @@ export const RsvpPage: React.FC = () => {
             <div className={ style.rsvp__wrapper }>
                 <div className={ style.rsvp__intro }>Please RSVP by February 15th, 2023!</div>
                 <div className={ style.rsvp__imageWrapper }>
-                    { isMobile() && <img className={ style.rsvp__image } alt="be our guest mobile" src={ './beOurGuestMobile.jpeg' } />}
+                    { <img className={ style.rsvp__image } alt="be our guest mobile" src={ './beOurGuestMobile.jpeg' } />}
                 </div>
                 <div className={ style.rsvp__venue }>Location:</div>
                 <div className={ style.rsvp__venue }>Buhl Mansion Guesthouse & Spa</div>
@@ -29,6 +27,8 @@ export const RsvpPage: React.FC = () => {
                     <Link href="https://www.buhlmansion.com/" className={ style.rsvp__venue }>Link to the Buhl Mansion Website</Link>
                 </Typography>
                 <div className={ style.rsvp__venue }>The ceremony will start promptly at 4pm.</div>
+                <div className={ style.rsvp__venue }>Dress Code:</div>
+                <div className={ style.rsvp__venue }>Summer Wedding Attire / Favorite Disney Character</div>
                 <SignupForm />
             </div>
         </div>

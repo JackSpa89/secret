@@ -2,12 +2,10 @@
 
 .tickerShell {
   @include screen-s-strict {
-    margin-top: -2.4rem;
     margin-left: 0;
     border: 10px solid purple;
   }
   @include screen-m-strict {
-    margin-top: -6.5rem;
     margin-left: 0;
     border: 8px solid purple;
   }

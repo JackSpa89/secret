@@ -3,14 +3,20 @@
 .rsvp {
   &__intro {
     margin: 1.4rem;
-    font-size: 1.5rem;
+    @include screen-s-strict {
+      font-size: 1.7rem;
+    }
+    font-size: 3rem;
     text-align: center;
     font-family: $font_disney_font;
   }
 
   &__venue {
     margin: 0.7rem;
-    font-size: 1.5rem;
+    @include screen-s-strict {
+      font-size: 1.7rem;
+    }
+    font-size: 3rem;
     text-align: center;
     font-family: $font_disney_font;
   }

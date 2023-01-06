@@ -2,16 +2,9 @@
 
 .root {
   &__backgroundImage {
-    @include screen-s-strict {
-      height: 15em;
-    }
-    @include screen-m-strict {
-      height: 35em;
-    }
     background-image: url('~public/disney.jpeg');
-    height: 60rem;
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:cover;
   }
 
   &__names {
