@@ -9,8 +9,10 @@
     flex-direction: column;
   }
   &__logo {
+    @include screen-l-strict {
+      margin-right: 5rem;
+    }
     text-align: center;
-    margin-right: 2rem;
     font-size: 3rem;
   }
 

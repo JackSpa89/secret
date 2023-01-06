@@ -37,7 +37,7 @@ export const HomePage: React.FC = () => {
             { isMobile() && (
                 <div>
                     <Countdown />
-                    <img className={ style.root__homeImg } alt='homeImg' src={ '/home.jpeg' } />
+                    <img className={ style.root__homeImg } alt='homeImg' src={ './home.jpeg' } />
                 </div>
             )}
         </div>

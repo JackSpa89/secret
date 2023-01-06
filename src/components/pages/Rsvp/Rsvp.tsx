@@ -17,7 +17,7 @@ export const RsvpPage: React.FC = () => {
             <AppMenu />
             <div className={ style.rsvp__wrapper }>
                 <div className={ style.rsvp__intro }>Please RSVP by January 31st 2023!</div>
-                { isMobile() && <img alt="be our guest mobile" src={ '/beOurGuestMobile.jpeg' } className={ style.rsvp__image } />}
+                { isMobile() && <img alt="be our guest mobile" src={ './beOurGuestMobile.jpeg' } className={ style.rsvp__image } />}
                 <SignupForm />
             </div>
         </div>

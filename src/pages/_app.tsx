@@ -3,7 +3,7 @@ import { AppContext, AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 
 import theme from '~styles/theme';
-import '../styles/globals.scss';
+import '~styles/globals.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (

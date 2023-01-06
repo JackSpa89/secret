@@ -24,6 +24,7 @@
       "~molecules/*": [ "./src/molecules/*" ],
       "~organism/*": [ "./src/organism/*" ],
       "~pages/*": ["./src/pages/*" ],
+      "~public/*": ["./public/*" ],
       "~scss/*": [ "./src/scss/*" ]
     },
     "resolveJsonModule": true,
