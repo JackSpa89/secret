@@ -1,4 +1,4 @@
-@import "src/scss/constants/breakpoints.module";
+@import 'spacings';
 
 @mixin screen-s-and-up {
   @media screen and (min-width: #{$screen-s-min}) {

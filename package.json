@@ -53,6 +53,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start",
     "export": "NODE_ENV=production next export"
   }
 }

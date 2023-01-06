@@ -1,11 +1,17 @@
+import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 import { AppContext, AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 
-import '~scss/globals.scss';
+import theme from '~styles/theme';
+import '../styles/globals.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
-        <Component { ...pageProps } />
+        <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={ theme }>
+                <Component { ...pageProps } />
+            </ThemeProvider>
+        </StyledEngineProvider>
     );
 };
 

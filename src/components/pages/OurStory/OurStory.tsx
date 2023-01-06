@@ -40,13 +40,13 @@ export const OurStoryPage: React.FC = () => {
             <AppMenu />
             <div className={ style.root__title }>How they met</div>
             <Chapter chapterNumber={ 1 } text={ 'Once upon a time...' } />
-            <ImageText imgSrc={ '/img/peterAndagon.jpg' } secondImgScr={ '/img/angelaAndagon.jpg' } text={ andagonText } />
+            <ImageText imgSrc={ '/peterAndagon.jpg' } secondImgScr={ '/angelaAndagon.jpg' } text={ andagonText } />
             <Chapter chapterNumber={ 2 } text={ 'Moving in together' } />
-            <ImageText imgSrc={ '/img/movingIn.jpeg' } text={ movingInText } />
+            <ImageText imgSrc={ '/movingIn.jpeg' } text={ movingInText } />
             <Chapter chapterNumber={ 3 } text={ 'First vacation' } />
-            <ImageText imgSrc={ '/img/firstVacation.jpeg' } text={ thirdText } />
+            <ImageText imgSrc={ '/firstVacation.jpeg' } text={ thirdText } />
             <Chapter chapterNumber={ 4 } text={ 'Düsseldorf' } />
-            <ImageText imgSrc={ '/img/firstVacation.jpeg' } text={ fourthText } />
+            <ImageText imgSrc={ '/firstVacation.jpeg' } text={ fourthText } />
         </div>
     );
 };

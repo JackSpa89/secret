@@ -1,12 +1,11 @@
-@import 'src/scss/constants/fonts';
-@import 'src/scss/mixins/breakpoints';
+@import '../../../styles/variables';
 
 .rsvpForm {
   @include screen-s-strict {
     background-image: none;
   }
   text-align: center;
-  background-image: url('/img/beOurGuest.jpeg');
+  background-image: url('/beOurGuest.jpeg');
   background-repeat:no-repeat;
   background-size:contain;
   border: .4rem solid purple;

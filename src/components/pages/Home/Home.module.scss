@@ -1,12 +1,11 @@
-@import 'src/scss/constants/fonts';
-@import 'src/scss/mixins/breakpoints';
+@import '../../../styles/variables';
 
 .root {
   &__backgroundImage {
     @include screen-s-strict {
       height: 15em;
     }
-    background-image: url('/img/disney.jpeg');
+    background-image: url('/disney.jpeg');
     height: 60rem;
     background-repeat:no-repeat;
     background-size:contain;
