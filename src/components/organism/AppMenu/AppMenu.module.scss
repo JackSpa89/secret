@@ -8,18 +8,16 @@
     justify-content: center;
     flex-direction: column;
   }
-  &__logo {
-    @include screen-l-strict {
-      margin-right: 5rem;
-    }
-    text-align: center;
-    font-size: 3rem;
-  }
 
   &__button {
+    @include screen-s-strict {
+      margin: 0 2rem 0 0;
+    }
+    @include screen-m-strict {
+      margin: 0 10rem 0 0;
+    }
     text-align: center;
-    margin: 0 2rem 0 0;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     display: block;
   }

@@ -34,7 +34,7 @@ export const isMobile = () => {
     const { width } = useWindowDimensions();
     let isMobile: boolean;
 
-    width === null ? isMobile = true : isMobile = width < 767;
+    width === null ? isMobile = true : isMobile = width < 1500;
 
     return isMobile;
 };

@@ -4,6 +4,9 @@
   @include screen-s-strict {
     background-image: none;
   }
+  @include screen-m-strict {
+    background-image: none;
+  }
   text-align: center;
   background-image: url('~public/beOurGuest.jpeg');
   background-repeat:no-repeat;
@@ -49,6 +52,11 @@
     @include screen-s-strict {
       margin-left: 0;
       font-size: 2.7rem;
+    }
+    @include screen-m-strict {
+      margin-left: 0;
+      padding-bottom: 5rem;
+      font-size: 5rem;
     }
     flex-direction: column;
     font-family: $font_disney_font;

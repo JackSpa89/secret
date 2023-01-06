@@ -6,6 +6,11 @@
     margin-left: 0;
     border: 10px solid purple;
   }
+  @include screen-m-strict {
+    margin-top: -6.5rem;
+    margin-left: 0;
+    border: 8px solid purple;
+  }
   font-family: $font_disney_ui;
   display: flex;
   border: 1px solid white;

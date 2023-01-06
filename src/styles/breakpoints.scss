@@ -12,6 +12,12 @@
   }
 }
 
+@mixin screen-m-strict {
+  @media screen and (min-width: #{$screen-m-min}) and (max-width: #{$screen-m-max}) {
+    @content;
+  }
+}
+
 @mixin screen-l-strict {
   @media screen and (min-width: #{$screen-l-min}) {
     @content;

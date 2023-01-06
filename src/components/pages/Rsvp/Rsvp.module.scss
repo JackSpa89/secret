@@ -19,7 +19,18 @@
     flex-direction: row;
   }
 
+  &__imageWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
   &__image {
-    width: -webkit-fill-available;
+    @include screen-s-strict {
+      width: 100%;
+    }
+    @include screen-m-strict {
+      width: 80%;
+    }
   }
 }

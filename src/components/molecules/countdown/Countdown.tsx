@@ -15,7 +15,7 @@ const useTicker = () => {
         };
     });
 
-    const target = new Date('06/24/2023 16:00:00'); // TODO EST
+    const target = new Date('06/24/2023 16:00:00');
     const difference = target.getTime() - now.getTime();
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
