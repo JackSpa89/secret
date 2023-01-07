@@ -13,7 +13,8 @@ const initialValues = {
         name: ''
     } ],
     allergies: '',
-    willAttend: ''
+    willAttend: '',
+    notAlone: ''
 };
 
 const validationSchema = yup.object().shape({
@@ -31,6 +32,10 @@ type ErrorProps = {
     name: string;
 }
 
+type FinishedTextProps = {
+    name: string;
+}
+
 const Error: React.FC<ErrorProps> = ({ name }) =>
     <ErrorMessage name={ name }>
         { msg => <div className={ style.rsvpForm__error }>{msg} </div> }
@@ -39,21 +44,22 @@ const Error: React.FC<ErrorProps> = ({ name }) =>
 export const SignupForm: React.FC = () => {
     const [ finished, setFinished ] = useState(false);
     const [ willAttend, setWillAttend ] = useState(false);
+    const [ name, setName ] = useState('');
 
-    const FinishedText: React.FC = () => {
+    const FinishedText: React.FC<FinishedTextProps> = ({ name }) => {
         return willAttend
             ? <div className={ style.rsvpForm__finished }>
-                <div>We'll meet you at the mansion!</div>
+                <div>Thank you {name}! We'll meet you at the mansion!</div>
             </div>
             : <div className={ style.rsvpForm__finished }>
                 <div>Sorry you can't make it!</div>
-                <div>We'll miss you!</div>
+                <div>We'll miss you, {name}!</div>
             </div>;
     };
 
     return (
         finished
-            ? <FinishedText />
+            ? <FinishedText name={ name } />
             : <Formik
                 initialValues={ initialValues }
                 validationSchema={ validationSchema }
@@ -67,6 +73,7 @@ export const SignupForm: React.FC = () => {
                     })
                         .then(() => {
                             setFinished(true);
+                            setName(values.name);
                             console.log('Database successfully updated!');
                         })
                         .catch(error => console.log(error));
@@ -74,15 +81,6 @@ export const SignupForm: React.FC = () => {
             >
                 {({ values }) => (
                     <Form className={ style.rsvpForm } >
-                        <div className={ style.rsvpForm__wrapper }>
-                            <label className={ style.rsvpForm__label }>Full name</label>
-                            <Field
-                                className={ style.rsvpForm__input }
-                                name="name"
-                                placeholder="Full name"
-                            />
-                            <Error name="name" />
-                        </div>
                         <div className={ style.rsvpForm__wrapper }>
                             <label className={ style.rsvpForm__label }>You coming?</label>
                             <label className={ style.rsvpForm__label }>
@@ -104,6 +102,15 @@ export const SignupForm: React.FC = () => {
                             No
                             </label>
                             <Error name="willAttend" />
+                            <div className={ style.rsvpForm__wrapper }>
+                                <label className={ style.rsvpForm__label }>Full name</label>
+                                <Field
+                                    className={ style.rsvpForm__input }
+                                    name="name"
+                                    placeholder="Full name"
+                                />
+                                <Error name="name" />
+                            </div>
                         </div>
                         {
                             values.willAttend === 'true' && <div>
@@ -116,40 +123,64 @@ export const SignupForm: React.FC = () => {
                                         name="allergies"
                                     />
                                 </div>
-                                <FieldArray name="plusOne">
+                                <div className={ style.rsvpForm__wrapper }>
+                                    <label className={ style.rsvpForm__label }>Plus one?</label>
+                                    <label className={ style.rsvpForm__label }>
+                                        <Field
+                                            className={ style.rsvpForm__checkboxes }
+                                            type="radio"
+                                            name="notAlone"
+                                            value="true"
+                                        />
+                                        Yes
+                                    </label >
+                                    <label className={ style.rsvpForm__label }>
+                                        <Field
+                                            className={ style.rsvpForm__checkboxes }
+                                            type="radio"
+                                            name="notAlone"
+                                            value="false"
+                                        />
+                                        No
+                                    </label>
+                                </div>
+                                { values.notAlone === 'true' && <FieldArray name="plusOne">
                                     {({ remove, push }) => (
                                         <div>
                                             {values.plusOne.length > 0 &&
-                                            values.plusOne.map((name, index) => (
-                                                <div className={ style.rsvpForm__wrapper } key={ index }>
-                                                    <div className="col">
-                                                        <label className={ style.rsvpForm__label }>{ `${index + 1}. Guest` }</label>
-                                                        <Field
-                                                            className={ style.rsvpForm__input }
-                                                            name={ `plusOne.${index}.name` }
-                                                            placeholder={ `${index + 1}. Guest` }
-                                                            type="text"
-                                                        />
-                                                        <button
-                                                            type="button"
-                                                            className={ style.rsvpForm__button }
-                                                            onClick={ () => remove(index) }
-                                                        >
-                                                            X
-                                                        </button>
+                                                values.plusOne.map((name, index) => (
+                                                    <div className={ style.rsvpForm__wrapper } key={ index }>
+                                                        <div className="col">
+                                                            <label className={ style.rsvpForm__label }>{ ` + ${index + 1}` }</label>
+                                                            <Field
+                                                                className={ style.rsvpForm__input }
+                                                                name={ `plusOne.${index}.name` }
+                                                                placeholder={ `Name of + ${index + 1}` }
+                                                                type="text"
+                                                            />
+                                                            {
+                                                                index !== 0 && <button
+                                                                    type="button"
+                                                                    className={ style.rsvpForm__button }
+                                                                    onClick={ () => remove(index) }
+                                                                >
+                                                                    X
+                                                                </button>
+                                                            }
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))}
+                                                ))}
                                             <button
                                                 type="button"
                                                 className={ style.rsvpForm__button }
                                                 onClick={ () => push({ name: '' }) }
                                             >
-                                            Add Guest
+                                                Add Guest
                                             </button>
                                         </div>
                                     )}
                                 </FieldArray>
+                                }
                             </div>
                         }
 

@@ -50,7 +50,7 @@ const Item: React.FC<ItemProps> = ({
                                 >
                                     Plus ones:
                                 </Typography>
-                                { `  ${guest.plusOne[0].name !== '' ? guest.plusOne.map(plus => plus.name).join(', ') : 'none'} `}
+                                { `  ${guest.plusOne.filter(plus => plus !== undefined || plus !== '').map(plus => plus.name).join(', ')}`}
                             </div>
                         </div>
                     </Fragment>
@@ -78,7 +78,7 @@ export const GuestListPage: React.FC = () => {
 
             const plusOnecounter = tmpGuestList
                 .filter(tmpGuest => tmpGuest.willAttend)
-                .map(tmp => tmp.plusOne[0].name === '' ? 0 : tmp.plusOne.length)
+                .map(tmp => (tmp.plusOne[0]?.name === '' || tmp.plusOne[0]?.name === undefined) ? 0 : tmp.plusOne.length)
                 .reduce((a, b) => a + b, 0);
 
             setCounter(guestCounter + plusOnecounter);

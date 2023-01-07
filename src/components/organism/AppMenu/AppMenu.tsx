@@ -18,7 +18,7 @@ export const AppMenu: React.FC = () => {
     const fontSize = 30;
 
     return (
-        <AppBar className={ style.appMenu } position="static">
+        <AppBar className={ style.appMenu } position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Button
