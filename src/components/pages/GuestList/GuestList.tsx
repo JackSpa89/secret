@@ -74,14 +74,11 @@ export const GuestListPage: React.FC = () => {
 
         onValue(dataRef, (snapshot) => {
             const tmpGuestList = Object.values(snapshot.val()) as Guest [];
-            const guestCounter = tmpGuestList.filter(tmpGuest => tmpGuest.willAttend).length;
+            const guestsThatWillAttend = tmpGuestList.filter(tmpGuest => tmpGuest.willAttend);
 
-            const plusOnecounter = tmpGuestList
-                .filter(tmpGuest => tmpGuest.willAttend)
-                .map(tmp => (tmp.plusOne[0]?.name === '' || tmp.plusOne[0]?.name === undefined) ? 0 : tmp.plusOne.length)
-                .reduce((a, b) => a + b, 0);
+            const plusOneList = guestsThatWillAttend.map(guests => guests.plusOne.filter(String).filter(plusOne => plusOne.name !== ''));
 
-            setCounter(guestCounter + plusOnecounter);
+            setCounter(guestsThatWillAttend.length + plusOneList.map(plusOnes => plusOnes.length).reduce((a, b) => a + b, 0));
             setGuestList(tmpGuestList);
         });
     }, []);
