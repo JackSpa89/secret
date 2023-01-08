@@ -44,7 +44,7 @@ const seventhText = 'They flew to Thailand a couple days later and spent 2 1/2 w
     'and visiting with friends.';
 
 const eightText = 'Upon their return Angela said "Baby or Cat?"' +
-    'The couple welcomed their baby kitten Ginger Mumber to the family on August 16th, 2022.';
+    ' The couple welcomed their baby kitten Ginger Mumber to the family on August 16th, 2022.';
 
 const ninthText = 'Our story doesn\'t end there though... To get the next chapter, please join us on June 24th, 2023 ' +
     'as we continue our happily ever after. \n 🥂\n \n \n';
