@@ -15,7 +15,7 @@ export const RsvpPage: React.FC = () => {
             </Head>
             <AppMenu />
             <div className={ style.rsvp__wrapper }>
-                <div className={ style.rsvp__intro }>Please RSVP by February 15th, 2023!</div>
+                <div className={ style.rsvp__intro }>Please RSVP by April 15th, 2023!</div>
                 <div className={ style.rsvp__imageWrapper }>
                     { <img className={ style.rsvp__image } alt="be our guest mobile" src={ './beOurGuestMobile.jpeg' } />}
                 </div>

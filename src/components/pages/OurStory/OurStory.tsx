@@ -36,7 +36,7 @@ const fifthText = 'In 2021 they spent Christmas in the US and took mock engageme
     'where they spent 2 relaxing days at the sauna. After about 12 hours at the spa, Peter took a knee, professed ' +
     'his love and asked Angela to be his partner in crime till the end of their days.';
 
-const sixthText = 'In Germany, you have to have to be married by a Justice of the peace in a courthouse or on a boat ' +
+const sixthText = 'In Germany, you have to be married by a Justice of the peace in a courthouse or on a boat ' +
     ' before you can have a big wedding ... silly Germans. The two were ' +
     'married on July 8th, 2022 with their closest friends and family as their witnesses.';
 
