@@ -3,5 +3,6 @@ export enum Routes {
     PICTURES= '/pictures',
     RSVP= '/rsvp',
     OUR_STORY= '/our-story',
+    DONATION_PAGE= '/donation-page',
     GUEST_LIST= '/guest-list'
 }

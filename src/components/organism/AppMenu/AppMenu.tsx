@@ -1,6 +1,8 @@
 import * as React from 'react';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import CastleIcon from '@mui/icons-material/Castle';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
@@ -11,7 +13,13 @@ import { Countdown } from '~components/molecules/countdown/Countdown';
 
 import style from './AppMenu.module.scss';
 
-import { navigateToHome, navigateToOurStory, navigateToPictures, navigateToRsvp } from '~helper/_url';
+import {
+    navigateToDonationPage,
+    navigateToHome,
+    navigateToOurStory,
+    navigateToPictures,
+    navigateToRsvp
+} from '~helper/_url';
 import { isMobile } from '~helper/windowsize';
 
 export const AppMenu: React.FC = () => {
@@ -39,6 +47,12 @@ export const AppMenu: React.FC = () => {
                         onClick={ navigateToPictures }
                     >
                         <AddAPhotoIcon sx={{ fontSize }} />
+                    </Button>
+                    <Button
+                        className={ style.appMenu__button }
+                        onClick={ navigateToDonationPage }
+                    >
+                        <CardGiftcardIcon sx={{ fontSize }} />
                     </Button>
                     { !isMobile() && <Countdown />}
                 </Toolbar>

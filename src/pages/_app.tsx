@@ -9,6 +9,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
         <StyledEngineProvider injectFirst>
             <ThemeProvider theme={ theme }>
+                <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
                 <Component { ...pageProps } />
             </ThemeProvider>
         </StyledEngineProvider>
